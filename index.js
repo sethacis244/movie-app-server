@@ -8,6 +8,7 @@ const port = process.env.PORT || 5000; // Define the port to listen on
 
 // Serve static files from the 'public' directory
 app.use('/images/liveshow', express.static(path.join(__dirname, 'public', 'liveshow')));
+app.use('/images/most-popular', express.static(path.join(__dirname, 'public', 'most-popular')));
 
 app.get('/', (req, res) => {
   return res.status(200).json({
